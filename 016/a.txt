@@ -1,0 +1,47 @@
+- Tuplas -
+
+lanche = hamburguer
+lanche = suco
+
+Suco irá eliminar o hamburguer da variável lanche.
+Para evitar isso, precisaremos de varíaveis compostas.
+
+Existem três variáveis compostas:
+  - Tuplas
+  - Listas
+  - Dicionários
+
+Iremos começar com tuplas!
+
+Tuplas são entre PARENTESES.
+
+lanche = ('hamburguer', 'suco', 'pizza', 'pudim')
+
+print(lanche) # Imprimi toda a tupla.
+print(lanche[2]) # Imprimi pizza.
+print(lanche[0:3]) # Imprimi hamburguer até a pizza.
+print(lanche[1:]) # Começa no suco e vai até o final.
+print(lanche[-1]) # Último elemento. Imprimi o pudim.
+# Esse último se refere a uma contagem decrescente.
+
+len(lanche) # quantos elementos tem em lanche.
+
+for c in lanche:
+  print(c)
+
+for c in range(0, len(lanche)):
+  print(c)
+
+for c in enumerate(lanche):
+  print(c)
+
+"As tuplas são IMUTÁVEIS!"
+
+print(sorted(lanche)) # coloca a tupla em ordem devolvendo uma lista.
+
+a = (2, 5, 4)
+b = (5, 8, 1, 2)
+c = a + b # junta a tupla a com tupla b.
+
+pessoa = ('Gustavo', 39, 'M', 99.88)
+del(pessoa) # a tupla é imutável, mas você pode apagá-la.

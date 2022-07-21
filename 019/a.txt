@@ -1,0 +1,53 @@
+- Dicionários (variáveis compostas) -
+
+Com os dicionários, conseguimos ter índices literais.
+
+Para dicionários, usamos chaves.
+
+dados = dict() ou  dados = {}
+
+dados{'nome':'Pedro', 'idade':25}
+
+print(dados['nome'])
+print(dados['idade'])
+
+dados['sexo'] = 'M' # Cria um novo elemento no dicionário e lhe atribui a letra M.
+# Não é necessário usar o append.
+
+del dados['idade'] # Elimina o elemento idade.
+
+filme = {'título': 'Star Wars',
+'ano': 1977,
+'diretor': 'George Lucas'
+}
+
+print(filme.values()) # Imprimi 'Star Wars' 1997 'George Lucas'
+print(filme.keys()) # Imprimi 'título' 'ano' 'diretor'
+print(filme.items()) # Imprimi tudo.
+
+for k, v in filme.items():
+  print(f'O {k} é {v}.')
+
+Você pode adicionar dicionários em listas.
+
+Caso você queira fazer isso, você não poderá usar o fatiamento para enviar uma cópia para a lista. Os dicionários possuem uma função própria para esse problema.
+  list.append(dict.copy())
+
+
+- Desafios -
+
+90) Faça um programa que leia nome e média de um aluno, guardando também a situação em um dicionário. No final, mostre o conteúdo da estrututra na tela.
+
+91) Crie um programa onde 4 jogadores joguem um dado e tenham resultados aleatórios. Guarde esses resultados em um dicionário. No final, coloque esse dicionário em ordem, sabendo que o vencedor tirou o maior número no dado.
+
+92) Crie um programa que leia nome, ano de nascimento e carteira de trabalho e cadastre-os (com idade) em um dicionário se por acaso a CTPS for diferente de ZERO. O dicionário receberá também o ano de contratação e o salário . Calcule e acrescente, além da idade, com quantos anos a pessoa vai ser aposentar. Considere que todo mundo se aposente com 35 anos.
+
+93) Crie um programa que gerencie o aproveitamento de um jogador de futebol. O programa vai ler o nome do jogador e quantas partidas ele jogou. Depois vai ler a quantidade de gols feitos em cada partida. No final, tudo isso será guardado em um dicionário, incluindo o total de gols feitos durante o campeonato.
+
+94) Crie um programa que leia nome, sexo e idade de várias pessoas, guardando os dados de cada pessoa em um dicionário e todos os dicionários em uma lista. No final, mostre:
+  A) Quantas pessoas foram cadastradas.
+  B) A média de idade do grupo.
+  C) Uma lista com todas as mulheres.
+  D) Uma lista com todas as pessoas com idade acima da média.
+
+95) Aprimore o desafio 093 para que ele funcione com vários jogadores, incluindo um sistema de visualização de detalhes do aproveitamento de cada jogador.

@@ -1,0 +1,37 @@
+- Listas: parte 1 -
+
+Listas são entre colchetes.
+
+As listas, diferentes das tuplas, são mutáveis.
+
+Para adicionar um elemento a mais numa lista, usamos:
+  lanche.append('biscoito')
+
+Para adicionar um elemento na lista numa posição sem excluir os outros elementos, isto é, empurrando os elementos posteriores uma casa afrente, usamos:
+  lanche.insert(0, 'hotdog')
+
+Para apagar algum elementos, temos duas formas:
+  del lanche[3]
+  lanche.pop(3)
+  lanche.remove('pizza')
+Com isso, os elementos posteriores irão regressar uma casa.
+
+Você pode criar listas com ranges:
+  valores = list(range(4, 11))
+
+Para colocar a lista em ordem, usamos:
+  valores.sort()
+Para colocar em ordem inversa:
+  valores.sort(reverse=True)
+
+Para criar uma cópia de uma lista, é preciso um cuidado a mais:
+  a = [2, 3, 4, 7]
+  b = a
+  b = [2, 3, 4, 7]
+Todos os valores de a estarão em b, mas há um porém.
+  b[2] = 8
+  b = [2, 3, 8, 7]
+  a = [2, 3, 8, 7]
+Ou seja, o que você mudar em b mudará em a. a e b estão usando o mesmo endereço. Para isso não acontecer:
+  b = a[:]
+

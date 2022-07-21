@@ -1,0 +1,43 @@
+# Laços de Repetição (Parte 1) 
+
+while True:
+	if terra:
+		passo
+	if vazio:
+		pula
+	if moeda:
+		pega
+	if troféu:
+		pula
+		break
+pega
+
+
+s = 10
+print(f'O valor é {s}') # Isso se chama "fstrings".
+
+nome = 'José'
+idade = 33
+print(f'O {nome} tem {idade} anos.') # Usar o ".format()" ainda funciona.
+
+
+
+ ----- Desafios -----
+66) Crie um programa que leia vários números inteiros pelo teclado. O programa só vai parar quando o usuário digitar o valor 999, que é a condição de parada. No final, moste quantos números foram digitados e qual foi a soma entre eles (desconsiderando o flag).
+
+67) Faça um programa que mostre a tabuada de vários números, um de cada vez, para cada valor digitado pelo usuário. O programa erá interrompido quando o número solicitado for negativo.
+
+68) Faça um programa que jogue par ou ímpar com o computador. O jogo só será interrompido quando o jogador PERDER, mostrando o total de vitórias consecutivas que ele conquistou no final do jogo.
+
+69) Crie um programa que leia a idade e o sexo de várias pessoas. A cada pessoa cadastrada, o programa deverá perguntar se o usuário quer ou não continuar. No final mostre:
+	a) Quantas pessoas tem mais de 18 anos.
+	b) Quantos homens foram cadastrados.
+	c) Quantas mulheres tem menos de 20 anos.
+
+70) Crie um programa que leia o nome e o preço de vários produtos. O programa deverá perguntar se o usuário vai continuar. No final, mostre:
+	a) Qual é o total gasto na compra.
+	b) Quantos produtos custam mais de R$ 1000,00.
+	c) Qual é o nome do produto mais barato.
+
+71) Crie um programa que simule o funcionamento de um caixa eletrônico. No início, pergunte ao usuário qual será o valor a ser sacado (número inteiro) e o programa vai informar quantas cédulas de cada valor serão entregues.
+	Obs.: Considere que o caixa possui cédulas de R$50,00, R$20,00, R$10,00 e R$1,00.
