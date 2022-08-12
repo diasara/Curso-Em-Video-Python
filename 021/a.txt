@@ -1,0 +1,121 @@
+- Funções pt. 2 -
+
+
+INTERACTIVE HELP
+
+help() # Digite no console
+# Depois digite o que você quer saber sobre
+# uma função ou uma biblioteca
+
+# Você pode fazer isso com os comandos
+Ex.: help(print)
+
+# Também dá pra fazer desse jeito
+Ex.: print(input.__doc__)
+
+
+DOCSTRINGS
+
+def contador(i, f, p):
+    '''
+        -> Faz uma contagem e mostra na tela.
+        :param i: inicio da contagem
+        :param f: fim da contagem
+        :param p: passo da contagem
+        :return: sem retorno
+    '''
+    c = input
+    while c <= f:
+        print(f'{c} ', end = '')
+        c += p
+    print('FIM!')
+
+help(contador) # Irá mostrar tudo o que está escrito entre as três àspas duplas.
+
+PARÂMETROS OPCIONAIS
+
+def somar(a = 0, b = 0, c = 0): # Desse modo, mesmo que os parâmetros não recebam algum valor, a função funciona.
+    s = a + b + com
+    print(f'A soma vale {s}')
+
+somar(3, 2, 5)
+somar(8, 4)
+somar()
+
+
+ESCOPO DE VARIÁVEIS
+
+def teste():
+    x = 8
+    print(f'Na função teste, n vale {n}') # Funciona, mesmo n não sendo enviado como parâmetros pois ele é uma variável global.
+    print(f'Na função teste, x vale {x}') # Funciona.
+
+n = 2
+print(f'No programa principal, n vale {n}') # Funciona.
+teste()
+print(f'No programa principal, x vale {x}') # Não funciona, pois x é uma variável local.
+
+
+def teste(b):
+    global a # Com isso, usaremos o a global em vez do local.
+    a = 8 # Ou seja, o a global valerá 8.
+    b += 4
+    c = 2
+    print(f'A dentro vale {a}')
+    print(f'B dentro vale {b}')
+    print(f'C dentro vale {c}')
+
+a = 5
+teste(a)
+print(f'A fora vale {a}')
+
+
+RETORNO DE VALORES
+
+def somar(a = 0, b = 0, c = 0):
+    s = a + b + com
+    return s
+
+r1 = somar(3 ,2, 5)
+r2 = somar(1, 7)
+r3 = somar(4)
+print(f'Meus cálculos deram {r1}, {r2} e {r3}.') # Pode usar as funções dentro do print.
+
+
+- EXERCICIOS - 
+
+101) Crie um programa que tenha uma função chamada voto() que vai receber como parâmetro o
+ano de nascimento de uma pessoa, retornando um valor literal indicando se uma pessoa tem
+voto NEGADO, OPCIONAL ou OBRIGATÓRIO nas eleições.
+
+102) Crie um programa que tenha uma função fatorial() que receba dois parâmetros: o primeiro
+que indique o número a calcular e o outro chamado show, que será um valor lógico (opcional)
+indicando se será mostrado ou não na tela o processo de cálculo do fatorial.
+
+103) Faça um programa que tenha uma função chamada ficha(), que receba dois parâmetros opcionais:
+o nome de um jogador e quantos gols ele marcou.
+
+O programa deverá ser capaz de mostrar a ficha do jogador, mesmo que algum dado não tenha sido
+informado corretamente.
+
+104) Crie um programa que tenha a função leiaInt(), que vai funcionar de forma semelhante à
+função input() do Python, só que fazendo a validação para aceitar apenas um valor numérico.
+
+Ex.:
+n = leiaInt('Digite um n')
+
+105) Faça um programa que tenha uma função notas() que pode receber várias notas de alunos e
+vai retornar um dicionário com as seguintes informações:
+    - Quantidade de notas
+    - A maior nota
+    - A menor nota
+    - A média da turma
+    - A situação (opcional)
+
+Adicione também as docstrings da função.
+
+106) Faça um mini-sistema que utilize o Interactive Help do Python. O usuário vai digitar o
+comando e o manual vai aparecer. Quando o usuário digitar a palavra 'FIM', o programa se
+encerrará.
+
+OBS.: Use cores.

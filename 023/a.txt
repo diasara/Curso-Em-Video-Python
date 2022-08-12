@@ -1,0 +1,36 @@
+- Tratamento de Erros e Exceções -
+
+# Quando o erro não se dá de forma sintática chamamos de Exceção
+Ex.: - NameError            # Variável não inicializada 
+     - ValueError           # Atribuir um valor não compatível a uma variável (str -> int)
+     - ZeroDivisionError    # Dividir algum número por zero
+     - TypeError            # Dividir 2/'2'
+     - IndexError           # Uma lista possui três elementos e você manda mostrar um quarto inexistente
+     - ModuleNotFoundError  # Tentar importar um módulo inexistente
+     - Dentre outras.
+
+# try/except
+try:
+    operação
+except:
+    falhou
+# Você pode usar um else depois do except para caso o try dê certo.
+# E você também pode colocar um finally no final que esse já irá aparecer sempre.
+
+# Você pode imprimir o tipo de erro que aconteceu
+except Exception as erro:
+    print(f'Problema encontrado foi {erro.__class__}')
+
+# Você pode colocar vários except's!
+
+- Exercicios -
+
+113) Reescreva a função leiaInt() que fizemos no desafio 104, incluindo agora a possibilidade da digitação de
+um número de tipo inválido. Aproveite e crie também uma função leiaFloat() com a mesma funcionalidade.
+
+114) Crie um código em Python que teste se o site Pudim está acessível pelo computador usado.
+
+115) Crie um pequeno sistema modularizado que permita cadastrar pessoas pelo seu nome e idade em um arquivo
+de texto simples.
+
+O sistema só vai ter duas opções: cadastrar uma nova pessoa e listar todas as pessoas cadastradas.
